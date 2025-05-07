@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Omnifood is an AI-powered food subscription that will make you eat healthy again,
+                                      365 days per year. It's tailored to your personal tastes and nutritional needs." />
+    <link rel="icon" href="img/favicon.webp" />
+    <link rel="apple-touch-icon" href="img/icons/favicon-apple.webp" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Omnifood &mdash; Never cook again!</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#">
+            <img class="logo" alt="Omnifood logo" src="../img/omnifood-logo.png" />
+        </a>
+
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <li><a class="main-nav-link clickable" href="#how">How it works</a></li>
+                <li><a class="main-nav-link clickable" href="#meals">Meals</a></li>
+                <li><a class="main-nav-link clickable" href="#testimonials">Testimonials</a></li>
+                <li><a class="main-nav-link clickable" href="#pricing">Pricing</a></li>
+                <li><a class="main-nav-link nav-cta clickable" href="#cta">Try for free</a></li>
+            </ul>
+        </nav>
+
+        <button class="btn-mobile-nav clickable">
+            <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+            <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+        </button>
+    </header>
+
+    <main>
+        <section class="section-hero">
+            <div class="hero">
+                <div class="hero-text-box">
+                    <h1 class="heading-primary">
+                        A healthy meal delivered to your door, every single day
+                    </h1>
+                    <p class="hero-description">
+                        The smart 365-days-per-year food subscription that will make you
+                        eat healthy again. Tailored to your personal tastes and
+                        nutritional needs.
+                    </p>
+                    <a href="#cta" class="btn btn--full margin-right-sm clickable">Start eating well</a>
+                    <a href="#how" class="btn btn--outline clickable">Learn more &darr;</a>
+                    <div class="delivered-meals">
+                        <div class="delivered-imgs">
+                            <img src="../img/customers/customer-1.jpg" alt="Customer photo" />
+                            <img src="../img/customers/customer-2.jpg" alt="Customer photo" />
+                            <img src="../img/customers/customer-3.jpg" alt="Customer photo" />
+                            <img src="../img/customers/customer-4.jpg" alt="Customer photo" />
+                            <img src="../img/customers/customer-5.jpg" alt="Customer photo" />
+                            <img src="../img/customers/customer-6.jpg" alt="Customer photo" />
+                        </div>
+                        <p class="delivered-text">
+                            <span>250,000+</span> meals delivered last year!
+                        </p>
+                    </div>
+                </div>
+                <div class="hero-img-box">
+                    <picture>
+                        <img src="../img/hero.png" class="hero-img"
+                            alt="Woman enjoying food, meals in storage container, and food bowls on a table" />
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-featured">
+            <div class="container">
+                <h2 class="heading-featured-in">As featured in</h2>
+                <div class="logos">
+                    <img src="../img/logos/techcrunch.png" alt="Techcrunch logo" />
+                    <img src="../img/logos/business-insider.png" alt="Business Insider logo" />
+                    <img src="../img/logos/the-new-york-times.png" alt="The New York Times logo" />
+                    <img src="../img/logos/forbes.png" alt="Forbes logo" />
+                    <img src="../img/logos/usa-today.png" alt="USA Today logo" />
+                </div>
+            </div>
+        </section>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal">&times;</span>
+                <h2>We're cooking up something delicious!</h2>
+                <p>Omnifood isn't live yet, but stay tuned.<br> Our services are launching soon.<br> We appreciate your interest! </p>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+
+        const clickableElements = document.querySelectorAll('.clickable');
+
+        const modal = document.getElementById("modal");
+        const closeModalBtn = document.getElementById("close-modal");
+
+        clickableElements.forEach(function(element) {
+            element.addEventListener('click', function(event) {
+
+                if (event.target.tagName.toLowerCase() === 'a') {
+                    event.preventDefault();
+                }
+
+                modal.style.display = "block";
+            });
+        });
+
+        closeModalBtn.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>
