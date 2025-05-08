@@ -17,9 +17,10 @@ body {
 
 .section-testimonials {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 55fr 45fr;
   padding: 9.6rem 0;
   background-color: #fdf2e9;
+  align-items: center;
 }
 
 .testimonial-container {
@@ -72,7 +73,17 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
 }
+
+.gallery-item {
+  overflow: hidden;
+}
+
 .gallery-item img {
   display: block;
   width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
 }
