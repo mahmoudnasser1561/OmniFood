@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How It Works</title>  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #fff;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #e67e22;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+    }
+
+    .step:nth-child(odd) {
+      flex-direction: row;
+    }
+
+    .step:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .image-wrapper {
+      width: 270px;
+      height: 250px;
+      background-color: #fbeee0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+      flex-shrink: 0;
+    }
+
+    .image-wrapper img {
+      max-width: 50%;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    .step-text {
+      flex: 1;
+      padding: 0 20px;
+      min-width: 300px;
+      box-sizing: border-box;
+    }
+
+    .step-number {
+      font-size: 60px;
+      color: #ddd;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .step-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .step-description {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .step {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .image-wrapper {
+        margin: 0 auto 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>How it works</h2>
+    <h1>Your daily dose of health in 3 simple steps</h1>
+
+    <div class="step">
+      <div class="step-text">
+        <div class="step-number">01</div>
+        <div class="step-title">Tell us what you like (and what not)</div>
+        <div class="step-description">
+          Never again waste time thinking about what to eat! Omnifood AI will create a 100% personalized weekly meal plan just for you.
+          It makes sure you get all the nutrients and vitamins you need, no matter what diet you follow!
+        </div>
+      </div>
+      <div class="image-wrapper">
+        <img src="image1.png" alt="Illustration of personalized meal planning">
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-text">
+        <div class="step-number">02</div>
+        <div class="step-title">Approve your weekly meal plan</div>
+        <div class="step-description">
+          Once per week, approve the meal plan generated for you by Omnifood AI. You can change ingredients, swap entire meals,
+          or even add your own recipes.
+        </div>
+      </div>
+      <div class="image-wrapper">
+        <img src="image2.png" alt="Illustration of meal plan approval">
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-text">
+        <div class="step-number">03</div>
+        <div class="step-title">Receive meals at convenient time</div>
+        <div class="step-description">
+          Best chefs in town will cook your selected meal every day, and we will deliver it to your door whenever works best for you.
+          You can change delivery schedule and address daily!
+        </div>
+      </div>
+      <div class="image-wrapper">
+        <img src="image3.png" alt="Illustration of meal delivery">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
