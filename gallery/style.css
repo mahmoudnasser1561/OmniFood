@@ -19,6 +19,11 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 9.6rem 0;
+  background-color: #fdf2e9;
+}
+
+.testimonial-container {
+  padding: 9.6rem;
 }
 
 .heading-secondary {
@@ -60,4 +65,14 @@ body {
 .testimonial-name {
   font-size: 1.6rem;
   color: #777;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+.gallery-item img {
+  display: block;
+  width: 100%;
 }
