@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Omnifood is an AI-powered food subscription that will make you eat healthy again,
+                                      365 days per year. It's tailored to your personal tastes and nutritional needs." />
+    <link rel="icon" href="img/favicon.webp" />
+    <link rel="apple-touch-icon" href="img/icons/favicon-apple.webp" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Pricing Plans | Online Restaurant</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #fff8f0;
+      color: #333;
+    }
+    header {
+      background-color: #ff6b35;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .pricing {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .plan {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      flex: 1;
+      min-width: 280px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      position: relative;
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .plan:hover {
+      transform: scale(1.05);
+    }
+    .plan h2 {
+      margin-top: 0;
+      color: #ff6b35;
+    }
+    .price {
+      font-size: 2em;
+      color: #e63946;
+      margin: 10px 0;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+    .subscribe-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff6b35;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+    .subscribe-btn:hover {
+      background-color: #e85c28;
+    }
+    .best-value {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #e63946;
+      color: white;
+      text-align: center;
+      padding: 5px 0;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(230, 57, 70, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .plan:nth-child(2) {
+      box-shadow: 0 0 25px rgba(230, 57, 70, 0.4);
+      z-index: 2;
+      transform: scale(1.03);
+    }
+    .benefits {
+      margin-top: 60px;
+    }
+    .benefits h2 {
+      text-align: center;
+      color: #ff6b35;
+    }
+    .benefit-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+    .benefit {
+      background: #fff3e0;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px;
+      flex: 1;
+      min-width: 250px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .icon-bar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: rgba(255, 107, 53, 0.9);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+      backdrop-filter: blur(5px);
+    }
+    .icon-bar i {
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .icon-bar i:hover {
+      transform: scale(1.2);
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <h1>Our Pricing Plans</h1>
+    <p>Choose the meal plan that suits your taste!</p>
+  </header>
+
+  <div class="container">
+    <section class="pricing">
+      <div class="plan">
+        <h2>Basic Meal</h2>
+        <p class="price">$9.99</p>
+        <ul>
+          <li>1 Main Dish</li>
+          <li>1 Drink</li>
+          <li>Free Delivery (within 3km)</li>
+        </ul>
+        <button class="subscribe-btn">Subscribe Now</button>
+      </div>
+      <div class="plan">
+        <div class="best-value">Best Value</div>
+        <h2>Family Combo</h2>
+        <p class="price">$24.99</p>
+        <ul>
+          <li>3 Main Dishes</li>
+          <li>2 Drinks</li>
+          <li>1 Dessert</li>
+          <li>Free Delivery</li>
+        </ul>
+        <button class="subscribe-btn">Subscribe Now</button>
+      </div>
+      <div class="plan">
+        <h2>Premium Feast</h2>
+        <p class="price">$39.99</p>
+        <ul>
+          <li>5 Main Dishes</li>
+          <li>Unlimited Drinks</li>
+          <li>2 Desserts</li>
+          <li>Priority Delivery</li>
+        </ul>
+        <button class="subscribe-btn">Subscribe Now</button>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <h2>Why Choose Us?</h2>
+      <div class="benefit-list">
+        <div class="benefit">
+          <h3>Fresh Ingredients</h3>
+          <p>We prepare every dish with the freshest local ingredients.</p>
+        </div>
+        <div class="benefit">
+          <h3>Fast Delivery</h3>
+          <p>Hot meals delivered to your door in under 30 minutes.</p>
+        </div>
+        <div class="benefit">
+          <h3>Great Value</h3>
+          <p>Delicious meals at prices that make sense for everyone.</p>
+        </div>
+        <div class="benefit">
+          <h3>Easy Ordering</h3>
+          <p>Our online system is fast, simple, and secure.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="icon-bar">
+    <i class="fas fa-home"></i>
+    <i class="fas fa-utensils"></i>
+    <i class="fas fa-concierge-bell"></i>
+    <i class="fas fa-user"></i>
+  </div>
+</body>
+</html>
